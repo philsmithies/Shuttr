@@ -85,7 +85,7 @@ export default function SignUp() {
     const imageUrl = res.data.secure_url;
     try {
       await Axios.post(
-        "http://localhost:3001/auth/signup",
+        "http://localhost:3001/signup",
         {
           name: nameReg,
           username: usernameReg,

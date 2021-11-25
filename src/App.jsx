@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./Components/Navbar";
 import SignUp from "./Pages/SignUp";
@@ -69,7 +70,6 @@ export default function App() {
           </Switch>
         </Router>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 .login_wrapper {
   display: flex;
-  background-color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;

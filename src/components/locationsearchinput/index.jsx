@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
 
 const LocationSearchInput = () => {
-  const [address, setAddress] = React.useState("");
-  const [coordinates, setCoordinates] = React.useState({
+  const [address, setAddress] = useState("");
+  const [coordinates, setCoordinates] = useState({
     lat: null,
     lng: null,
   });

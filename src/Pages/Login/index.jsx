@@ -26,7 +26,6 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
-    backgroundColor: "#fffffff",
   },
   text: {
     colorBlack: "#000000",

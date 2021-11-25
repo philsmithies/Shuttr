@@ -18,7 +18,7 @@ export default function NavBar() {
   };
   return (
     <nav>
-      {!data ? (
+      {data ? (
         <Link to="/">
           <img
             class="navbar_logo"
