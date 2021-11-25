@@ -6,21 +6,14 @@ import PlacesAutocomplete, {
   getLatLng,
 } from "react-places-autocomplete";
 import MiniMap from "../../components/MiniMap";
-import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link";
-import Paper from "@material-ui/core/Paper";
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Typography from "@material-ui/core/Typography";
+import {
+  Button,
+  CssBaseline,
+  TextField,
+  Grid,
+  Typography,
+} from "@material-ui/core/";
 import { makeStyles } from "@material-ui/core/styles";
-import { spacing } from "@material-ui/system";
 
 export default function ImageUpload() {
   const url = "https://api.cloudinary.com/v1_1/dryaxqxie/image/upload";
@@ -53,7 +46,7 @@ export default function ImageUpload() {
   };
 
   function isLoading() {
-    if (loading == true) {
+    if (loading) {
       return (
         <div>
           <img
@@ -94,7 +87,7 @@ export default function ImageUpload() {
       const imageUrl = res.data.secure_url;
       const image = await axios
         .post(
-          "http://localhost:3001/upload",
+          "http://localhost:3001/photos/upload",
           {
             imageUrl,
             hashtag,

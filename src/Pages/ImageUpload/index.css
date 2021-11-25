@@ -9,21 +9,25 @@
   border-radius: 25px;
 }
 
-#signup-wrapper{
-  background: rgb(87,101,95);
-  background: linear-gradient(180deg, rgba(87,101,95,1) 14%, rgba(44,53,49,1) 100%);
+#signup-wrapper {
+  background: rgb(87, 101, 95);
+  background: linear-gradient(
+    180deg,
+    rgba(87, 101, 95, 1) 14%,
+    rgba(44, 53, 49, 1) 100%
+  );
   padding-bottom: 3rem;
   padding-top: 2rem;
   max-width: 600px;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-.preview-image-div{
+.preview-image-div {
   border-radius: 25px;
   max-width: 500px;
   margin: 1em auto;
   box-shadow: 0 14px 28px hsl(185deg 90% 18% / 30%),
-  0 10px 10px rgba(255, 255, 255, 0.2);
+    0 10px 10px rgba(255, 255, 255, 0.2);
   background-color: white;
 }
 
@@ -36,10 +40,14 @@
   width: 448px;
   height: 448px;
   background-color: black;
-  background: rgb(87,101,95);
-  background: linear-gradient(180deg, rgba(87,101,95,1) 14%, rgba(44,53,49,1) 100%);
+  background: rgb(87, 101, 95);
+  background: linear-gradient(
+    180deg,
+    rgba(87, 101, 95, 1) 14%,
+    rgba(44, 53, 49, 1) 100%
+  );
 }
-.preview-image{
+.preview-image {
   width: 100%;
   max-height: 384px;
   object-fit: cover;
@@ -49,17 +57,17 @@
   background-color: pink;
 } */
 
-.preview-text{
-  background-color: black;
-  color: white;
-} 
-
-.map_card-text{
+.preview-text {
   background-color: black;
   color: white;
 }
 
-.map_card{
+.map_card-text {
+  background-color: black;
+  color: white;
+}
+
+.map_card {
   align-self: center;
   justify-self: center;
   display: flex;
@@ -67,21 +75,25 @@
   width: 20vw;
   height: 20vw;
   background-color: black;
-  background: rgb(87,101,95);
-  background: linear-gradient(180deg, rgba(87,101,95,1) 14%, rgba(44,53,49,1) 100%);
+  background: rgb(87, 101, 95);
+  background: linear-gradient(
+    180deg,
+    rgba(87, 101, 95, 1) 14%,
+    rgba(44, 53, 49, 1) 100%
+  );
 }
 
-.map_text{
+.map_text {
   background-color: black;
   color: white;
 }
 
-#signup-wrapper{
+#signup-wrapper {
   margin-top: 3em;
 }
 
-.places input{
-  font-family: 'Roboto';
+.places input {
+  font-family: "Roboto";
   color: grey;
   padding-left: 1rem;
   height: 56px;
@@ -91,14 +103,11 @@
   border: 0.5px grey solid;
 }
 
-.upload{
+.upload {
   margin-bottom: 0.5em;
 }
 
-.loadinggif{
+.loadinggif {
   width: 50px;
   margin-top: 1rem;
 }
-
-
-
