@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./index.css";
-import loadingGif from "./loading.gif";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -57,14 +56,18 @@ export default function ImageUpload() {
     if (loading == true) {
       return (
         <div>
-          <img class="loadinggif" src={loadingGif} />
+          <img
+            class="loadinggif"
+            src={process.env.PUBLIC_URL + "/images/loading.gif"}
+            alt="loading animation"
+          />
         </div>
       );
     }
   }
 
   function Minimap() {
-    if (coordinates.lng != "-0.1277583") {
+    if (coordinates.lng !== "-0.1277583") {
       return (
         <MiniMap
           width="20vw"
