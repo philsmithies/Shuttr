@@ -5,7 +5,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-import MiniMap from "../../components/MiniMap";
+import MiniMap from "../../Components/MiniMap";
 import {
   Button,
   CssBaseline,

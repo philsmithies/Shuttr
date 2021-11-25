@@ -6,8 +6,6 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
@@ -15,7 +13,6 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Input from "@material-ui/core/Input";
 
 function Copyright() {
   return (
@@ -60,11 +57,10 @@ export default function SignUp() {
   const [emailReg, setEmailReg] = useState("");
   const [nameReg, setNameReg] = useState("");
   const [passwordConfirmationReg, setPasswordConfirmationReg] = useState("");
-  const [userMsg, setUserMsg] = useState("");
   const [isMsg, setIsMsg] = useState("");
   const [newMsg, setNewMsg] = useState("");
   const [emailMsg, setEmailMsg] = useState("");
-  const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{4,})");
+  const strongRegex = new RegExp("^(?=.{4,})");
   const emailRegex = new RegExp(
     "^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
   );
@@ -72,8 +68,6 @@ export default function SignUp() {
   const passwordCriteria = [
     "Password does not meet criteria:",
     "\n• Must be over 4 characters long",
-    "\n• Must include numbers and letters",
-    "\n• Must include at least 1 upper and lower case letter",
   ];
 
   let newText = passwordCriteria
@@ -82,10 +76,6 @@ export default function SignUp() {
     .map((i) => {
       return <p>{i}</p>;
     });
-
-  const componentWillUnmount = () => {
-    clearTimeout(newMsgTimeoutHandle);
-  };
 
   const register = async () => {
     const formData = new FormData();
@@ -127,34 +117,33 @@ export default function SignUp() {
 
   const onChange = (e) => {
     setImage(e.target.files[0]);
-    const file = e.target.files[0];
   };
 
   const checkValidation = (e) => {
-    // if (!emailRegex.test(emailReg)) {
-    //   setEmailMsg("Not a valid email address");
-    //   clearTimeout(newMsgTimeoutHandle);
-    //   newMsgTimeoutHandle = setTimeout(() => {
-    //     setEmailMsg("");
-    //     newMsgTimeoutHandle = 0;
-    //   }, 6500);
-    // } else if (!strongRegex.test(passwordReg)) {
-    //   setNewMsg(newText);
-    //   clearTimeout(newMsgTimeoutHandle);
-    //   newMsgTimeoutHandle = setTimeout(() => {
-    //     setNewMsg("");
-    //     newMsgTimeoutHandle = 0;
-    //   }, 6500);
-    // } else if (passwordReg !== passwordConfirmationReg) {
-    //   setIsMsg("Passwords do not match");
-    //   clearTimeout(newMsgTimeoutHandle);
-    //   newMsgTimeoutHandle = setTimeout(() => {
-    //     setIsMsg("");
-    //     newMsgTimeoutHandle = 0;
-    //   }, 6500);
-    // } else {
-    register();
-    // }
+    if (!emailRegex.test(emailReg)) {
+      setEmailMsg("Not a valid email address");
+      clearTimeout(newMsgTimeoutHandle);
+      newMsgTimeoutHandle = setTimeout(() => {
+        setEmailMsg("");
+        newMsgTimeoutHandle = 0;
+      }, 6500);
+    } else if (!strongRegex.test(passwordReg)) {
+      setNewMsg(newText);
+      clearTimeout(newMsgTimeoutHandle);
+      newMsgTimeoutHandle = setTimeout(() => {
+        setNewMsg("");
+        newMsgTimeoutHandle = 0;
+      }, 6500);
+    } else if (passwordReg !== passwordConfirmationReg) {
+      setIsMsg("Passwords do not match");
+      clearTimeout(newMsgTimeoutHandle);
+      newMsgTimeoutHandle = setTimeout(() => {
+        setIsMsg("");
+        newMsgTimeoutHandle = 0;
+      }, 6500);
+    } else {
+      register();
+    }
   };
   const classes = useStyles();
   return (
@@ -168,7 +157,7 @@ export default function SignUp() {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        {emailMsg} {newMsg} {isMsg} {userMsg}
+        {emailMsg} {newMsg} {isMsg}
         <Typography component="h1" variant="h5">
           Sign Up
         </Typography>

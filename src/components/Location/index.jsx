@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import { Image } from "cloudinary-react";
-import MiniMap from "../../components/MiniMap";
+import MiniMap from "../MiniMap";
 import { Link } from "react-router-dom";
 
 export default function Location({

@@ -2,10 +2,9 @@ import "./index.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Image } from "cloudinary-react";
-import { makeStyles } from "@material-ui/core/styles";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import Location from "../../components/Location";
+import Location from "../../Components/Location";
 
 export default function Hashtag({ searchValue }) {
   const [filteredData, setFilteredData] = useState([]);
@@ -25,24 +24,6 @@ export default function Hashtag({ searchValue }) {
     (picture) => picture.hashtag === searchValue
   );
 
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-around",
-      overflow: "hidden",
-      backgroundColor: theme.palette.background.card,
-    },
-    gridList: {
-      width: 1000,
-      height: 450,
-    },
-    icon: {
-      color: "rgba(255, 255, 255, 0.54)",
-    },
-  }));
-
-  const classes = useStyles();
   return (
     <div class="page">
       <div class="container">
