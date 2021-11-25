@@ -9,7 +9,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import Location from "../../components/Location";
 
-export default function Colourful() {
+export default function Hashtag({ searchValue }) {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Colourful() {
   }, []);
 
   const pics = filteredData.filter(
-    (picture) => picture.hashtag === "colourful"
+    (picture) => picture.hashtag === searchValue
   );
 
   const useStyles = makeStyles((theme) => ({

@@ -84,9 +84,8 @@ export default function Login() {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/auth/login",
+      url: "http://localhost:3001/login",
     }).then((res) => {
-      console.log(res);
       if (res.data === "Successfully Authenticated") {
         window.location.href = "/discover";
       }
