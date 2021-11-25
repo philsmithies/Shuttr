@@ -1,34 +1,20 @@
 import "./App.css";
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./components/Navbar";
 import SignUp from "./Pages/SignUp";
 import Map from "./Pages/Map";
 import Login from "./Pages/Login";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { useContext } from "react";
-import { UserContext } from "./Contexts/UserContext";
-import NavBar from "./components/Navbar";
 import ImageUpload from "./Pages/ImageUpload";
 import Profile from "./Pages/Profile";
 import Home from "./Pages/Home";
 import Discover from "./Pages/Discover";
 import Footer from "./components/Footer";
 import Inspiration from "./Pages/Inspiration";
-import MiniMap from "./components/MiniMap";
-import Architecture from "./Pages/Architecture";
-import Colourful from "./Pages/Colourful";
-import Greenery from "./Pages/Greenery";
-import Vibes from "./Pages/Vibes";
-import Tourist from "./Pages/Tourist";
-import StreetArt from "./Pages/StreetArt";
-import Rooftop from "./Pages/Rooftop";
-import Sunset from "./Pages/Sunset";
-import Lights from "./Pages/Lights";
-import Location from "./components/Location";
 import Hashtag from "./Pages/Hashtag";
+// import MiniMap from "./components/MiniMap";
 
 export default function App() {
-  const data = useContext(UserContext);
-  console.log(data);
   return (
     <div>
       <div className="App">
@@ -46,19 +32,40 @@ export default function App() {
             <Route path="/Discover" component={Discover} />
             <Route
               path="/Architecture"
-              render={(props) => (
-                <Hashtag {...props} searchValue={`architecture`} />
-              )}
+              render={() => <Hashtag searchValue={`architecture`} />}
             />
-            <Route path="/Colourful" component={Colourful} />
-            <Route path="/Greenery" component={Greenery} />
-            <Route path="/Vibes" component={Vibes} />
-            <Route path="/Tourist" component={Tourist} />
-            <Route path="/StreetArt" component={StreetArt} />
-            <Route path="/Rooftop" component={Rooftop} />
-            <Route path="/Sunset" component={Sunset} />
-            <Route path="/Lights" component={Lights} />
-            <Route path="/Location" component={Location} />
+            <Route
+              path="/Colourful"
+              render={() => <Hashtag searchValue={`colourful`} />}
+            />
+            <Route
+              path="/Greenery"
+              render={() => <Hashtag searchValue={`greenery`} />}
+            />
+            <Route
+              path="/Vibes"
+              render={() => <Hashtag searchValue={`vibes`} />}
+            />
+            <Route
+              path="/Tourist"
+              render={() => <Hashtag searchValue={`tourist`} />}
+            />
+            <Route
+              path="/Rooftop"
+              render={() => <Hashtag searchValue={`rooftop`} />}
+            />
+            <Route
+              path="/Sunset"
+              render={() => <Hashtag searchValue={`sunset`} />}
+            />
+            <Route
+              path="/Lights"
+              render={() => <Hashtag searchValue={`lights`} />}
+            />
+            <Route
+              path="/Location"
+              render={() => <Hashtag searchValue={`location`} />}
+            />
             <Route component={Error} />
           </Switch>
         </Router>

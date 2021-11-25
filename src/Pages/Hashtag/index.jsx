@@ -1,6 +1,4 @@
 import "./index.css";
-
-import * as React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Image } from "cloudinary-react";
