@@ -1,12 +1,8 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import "./index.css";
+import { Link } from "react-router-dom";
 import Axios from "axios";
 import { UserContext } from "../../Contexts/UserContext";
-import Logo from "./shuttrlogo.png";
-
-// import 'materialize-css';
-// import { Button, Card, Row, Col } from 'react-materialize';
 
 export default function NavBar() {
   const data = useContext(UserContext);
@@ -24,7 +20,11 @@ export default function NavBar() {
     <nav>
       {!data ? (
         <Link to="/">
-          <img class="navbar_logo" src={Logo} />
+          <img
+            class="navbar_logo"
+            src={process.env.PUBLIC_URL + "/images/shuttrlogo.png"}
+            alt="header logo"
+          />
         </Link>
       ) : null}
 

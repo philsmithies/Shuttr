@@ -12,7 +12,6 @@ import Discover from "./Pages/Discover";
 import Footer from "./components/Footer";
 import Inspiration from "./Pages/Inspiration";
 import Hashtag from "./Pages/Hashtag";
-// import MiniMap from "./components/MiniMap";
 
 export default function App() {
   return (

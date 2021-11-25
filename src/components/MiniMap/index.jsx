@@ -1,47 +1,30 @@
-import React, { useEffect, useState } from "react";
-import ReactMapGL, { Marker, Popup } from 'react-map-gl';
-import { Room } from "@material-ui/icons"
-import { Link } from 'react-router-dom';
-import axios from "axios";
-import {Image} from 'cloudinary-react';
+import React, { useState } from "react";
+import ReactMapGL, { Marker } from "react-map-gl";
+import { Room } from "@material-ui/icons";
 
-function MiniMap({lat, lng}) {
-  const [photos,setPhotos] = useState([]);
-  const [allData, setAllData] = useState([]);
-  const [currentPlaceId, setCurrentPlaceId] = useState(null);
-
+function MiniMap({ lat, lng, width, height, zoom, color }) {
   const [viewport, setViewport] = useState({
-    width: "20vw",
-    height: "20vw",
+    width: width,
+    height: height,
     latitude: lat,
     longitude: lng,
-    zoom: 13
+    zoom: zoom,
   });
 
   return (
-    
     <div>
-       <ReactMapGL
-      {...viewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
-      onViewportChange={nextViewport => setViewport(nextViewport)}
-      mapStyle="mapbox://styles/ajmccor/ckq0xqybt3fsf18rltfgs0y5t"
-    >   
-
-        <Marker 
-                latitude={lat}
-                longitude={lng}
-                offsetLeft={-20} 
-                offsetTop={-10}>
-
-                <Room style={{fontSize:viewport.zoom * 4, color:"#45A293"}}/>
-
-        
-              </Marker>
-      
-    </ReactMapGL>
+      <ReactMapGL
+        {...viewport}
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
+        onViewportChange={(nextViewport) => setViewport(nextViewport)}
+        mapStyle="mapbox://styles/ajmccor/ckq0xqybt3fsf18rltfgs0y5t"
+      >
+        <Marker latitude={lat} longitude={lng} offsetLeft={-20} offsetTop={-10}>
+          <Room style={{ fontSize: viewport.zoom * 4, color: color }} />
+        </Marker>
+      </ReactMapGL>
     </div>
-    );
+  );
 }
 
-export default MiniMap
+export default MiniMap;

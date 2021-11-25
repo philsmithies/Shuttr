@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import { Image } from "cloudinary-react";
-import ModalMap from "../../components/ModalMap";
+import MiniMap from "../../components/MiniMap";
 import { Link } from "react-router-dom";
 
 export default function Location({
@@ -27,7 +27,14 @@ export default function Location({
           />
         </div>
         <div class="location_newmap">
-          <ModalMap lat={coordinates.lat} lng={coordinates.lng} />
+          <MiniMap
+            lat={coordinates.lat}
+            lng={coordinates.lng}
+            width="300px"
+            height="300px"
+            zoom={14}
+            color="orangeRed"
+          />
         </div>
         <div class="location_info">
           <p class="location_description">Description:</p>

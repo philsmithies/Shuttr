@@ -1,17 +1,17 @@
 import React from "react";
 import PlacesAutocomplete, {
   geocodeByAddress,
-  getLatLng
+  getLatLng,
 } from "react-places-autocomplete";
 
 const LocationSearchInput = () => {
   const [address, setAddress] = React.useState("");
   const [coordinates, setCoordinates] = React.useState({
     lat: null,
-    lng: null
+    lng: null,
   });
 
-  const handleSelect = async value => {
+  const handleSelect = async (value) => {
     const results = await geocodeByAddress(value);
     const latLng = await getLatLng(results[0]);
     setAddress(value);
@@ -35,10 +35,10 @@ const LocationSearchInput = () => {
             <div>
               {loading ? <div>...loading</div> : null}
 
-              {suggestions.map(suggestion => {
+              {suggestions.map((suggestion) => {
                 const style = {
                   backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
-                  cursor: "pointer"
+                  cursor: "pointer",
                 };
 
                 return (
@@ -53,6 +53,6 @@ const LocationSearchInput = () => {
       </PlacesAutocomplete>
     </div>
   );
-}
+};
 
-export default LocationSearchInput
+export default LocationSearchInput;

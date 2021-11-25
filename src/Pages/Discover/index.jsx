@@ -1,5 +1,4 @@
 import "./index.css";
-
 import * as React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -9,14 +8,10 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import "./index.css";
 
-export default function TitlebarGridList() {
+export default function Discover() {
   const [allData, setAllData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [show, setShow] = useState(false);
   const [input, setInput] = useState("");
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const searchTag = (event) => {
     let userInput = event.target.value;
@@ -27,7 +22,6 @@ export default function TitlebarGridList() {
     }
     let value = userInput.charAt(0).toUpperCase() + userInput.slice(1);
     let result = [];
-    console.log(value);
     result = allData.filter((data) => {
       return data.location.search(value) !== -1;
     });
@@ -57,10 +51,6 @@ export default function TitlebarGridList() {
           />
           <div class="search"></div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
         <div class="search_results">
           <br />
           {<b>{input}</b>}
