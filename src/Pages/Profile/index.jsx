@@ -107,7 +107,7 @@ function Profile() {
                   marginBottom: "2rem",
                 }}
               >
-                Your Posts
+                {data.username}'s Posts
               </Typography>
               {pics.map((value, index) => (
                 <div class="single-post" key={index}>
