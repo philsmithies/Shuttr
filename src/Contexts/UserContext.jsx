@@ -15,7 +15,6 @@ const UserContextProvider = (props) => {
       withCredentials: true,
       url: "http://localhost:3001/user",
     }).then((res) => {
-      console.log(res.data);
       setData(res.data);
     });
   }, []);
