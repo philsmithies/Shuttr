@@ -87,7 +87,7 @@ export default function ImageUpload() {
       const imageUrl = res.data.secure_url;
       const image = await axios
         .post(
-          "http://localhost:3001/photos/upload",
+          "/photos/upload",
           {
             imageUrl,
             hashtag,

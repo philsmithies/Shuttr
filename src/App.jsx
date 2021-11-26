@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./Components/Navbar";
 import SignUp from "./Pages/SignUp";
@@ -10,7 +9,6 @@ import ImageUpload from "./Pages/ImageUpload";
 import Profile from "./Pages/Profile";
 import Home from "./Pages/Home";
 import Discover from "./Pages/Discover";
-import Footer from "./Components/Footer";
 import Inspiration from "./Pages/Inspiration";
 import Hashtag from "./Pages/Hashtag";
 

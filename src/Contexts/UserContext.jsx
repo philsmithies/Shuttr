@@ -13,7 +13,7 @@ const UserContextProvider = (props) => {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:3001/user",
+      url: "/user",
     }).then((res) => {
       setData(res.data);
     });

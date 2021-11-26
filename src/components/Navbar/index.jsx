@@ -7,7 +7,7 @@ import { UserContext } from "../../Contexts/UserContext";
 export default function NavBar() {
   const data = useContext(UserContext);
   const logout = () => {
-    Axios.get("http://localhost:3001/logout", {
+    Axios.get("/logout", {
       withCredentials: true,
     }).then((res) => {
       console.log(res.data);

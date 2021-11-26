@@ -10,7 +10,7 @@ export default function Hashtag({ searchValue }) {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    axios("http://localhost:3001/photos/all")
+    axios("/photos/all")
       .then((response) => {
         console.log(response.data);
         setFilteredData(response.data);
