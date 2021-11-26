@@ -21,7 +21,7 @@ function Profile() {
       Axios({
         method: "GET",
         withCredentials: true,
-        url: "http://localhost:3001/user",
+        url: "/user",
       }).then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -30,7 +30,7 @@ function Profile() {
       Axios({
         method: "GET",
         withCredentials: true,
-        url: "http://localhost:3001/user/" + userId,
+        url: "/user/" + userId,
       }).then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -58,7 +58,7 @@ function Profile() {
     // console.log(userData);
     // setData(userData);
     // });
-    Axios("http://localhost:3001/photos/all").then(function (response) {
+    Axios("/photos/all").then(function (response) {
       console.log(response.data);
       setAllPictures(response.data);
       // setFilteredData(response.data);

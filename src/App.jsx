@@ -22,24 +22,24 @@ export default function App() {
           <NavBar />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/Login" component={Login} />
-            <Route path="/SignUp" component={SignUp} />
-            <Route path="/Map" component={Map} />
-            <Route path="/ImageUpload" component={ImageUpload} />
-            <Route path="/Inspiration" component={Inspiration} />
-            <Route path="/Profile/:userId" component={Profile} />
-            <Route path="/Profile" component={Profile} />
-            <Route path="/Discover" component={Discover} />
+            <Route path="/pages/login" component={Login} />
+            <Route path="/pages/signup" component={SignUp} />
+            <Route path="/pages/map" component={Map} />
+            <Route path="/pages/imageupload" component={ImageUpload} />
+            <Route path="/pages/inspiration" component={Inspiration} />
+            <Route path="/pages/profile/:userId" component={Profile} />
+            <Route path="/pages/profile" component={Profile} />
+            <Route path="/pages/discover" component={Discover} />
             <Route
-              path="/Architecture"
+              path="/pages/Architecture"
               render={() => <Hashtag searchValue={`architecture`} />}
             />
             <Route
-              path="/Colourful"
+              path="/pages/Colourful"
               render={() => <Hashtag searchValue={`colourful`} />}
             />
             <Route
-              path="/Greenery"
+              path="/pages/Greenery"
               render={() => <Hashtag searchValue={`greenery`} />}
             />
             <Route
@@ -47,23 +47,23 @@ export default function App() {
               render={() => <Hashtag searchValue={`vibes`} />}
             />
             <Route
-              path="/Tourist"
+              path="/pages/Tourist"
               render={() => <Hashtag searchValue={`tourist`} />}
             />
             <Route
-              path="/Rooftop"
+              path="/pages/Rooftop"
               render={() => <Hashtag searchValue={`rooftop`} />}
             />
             <Route
-              path="/Sunset"
+              path="/pages/Sunset"
               render={() => <Hashtag searchValue={`sunset`} />}
             />
             <Route
-              path="/Lights"
+              path="/pages/Lights"
               render={() => <Hashtag searchValue={`lights`} />}
             />
             <Route
-              path="/Location"
+              path="/pages/Location"
               render={() => <Hashtag searchValue={`location`} />}
             />
             <Route component={Error} />

@@ -73,10 +73,10 @@ export default function Login() {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/login",
+      url: "/login",
     }).then((res) => {
       if (res.data === "Successfully Authenticated") {
-        window.location.href = "/discover";
+        window.location.href = "/pages/discover";
       }
     });
   };

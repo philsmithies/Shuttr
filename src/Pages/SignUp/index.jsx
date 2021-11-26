@@ -72,7 +72,7 @@ export default function SignUp() {
     const imageUrl = res.data.secure_url;
     try {
       await Axios.post(
-        "http://localhost:3001/signup",
+        "/signup",
         {
           name: nameReg,
           username: usernameReg,
@@ -87,7 +87,7 @@ export default function SignUp() {
       ).then((response) => {
         console.log(response);
         if (response.data === "User Created") {
-          window.location.href = "/login";
+          window.location.href = "/pages/login";
         } else if (response.data !== "User Created") {
           setIsMsg("User already exists, please sign in or create new account");
           clearTimeout(newMsgTimeoutHandle);
