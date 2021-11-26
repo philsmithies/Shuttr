@@ -4,7 +4,7 @@
   justify-content: center;
   min-width: 600px;
   min-height: 600px;
-  padding: 3em;
+  padding: 0 3em 3em 3em;
   margin-right: 2rem;
   border-radius: 25px;
 }
@@ -37,7 +37,7 @@
   justify-self: center;
   display: flex;
   flex-direction: column;
-  width: 448px;
+  width: 30%;
   height: 448px;
   background-color: black;
   background: rgb(87, 101, 95);
@@ -72,8 +72,9 @@
   justify-self: center;
   display: flex;
   flex-direction: column;
-  width: 20vw;
-  height: 20vw;
+  width: 30%;
+  overflow-y: none;
+  height: 448px;
   background-color: black;
   background: rgb(87, 101, 95);
   background: linear-gradient(

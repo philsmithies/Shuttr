@@ -63,8 +63,8 @@ export default function ImageUpload() {
     if (coordinates.lng !== "-0.1277583") {
       return (
         <MiniMap
-          width="20vw"
-          height="20vw"
+          width="100%"
+          height="400px"
           zoom={13}
           lat={coordinates.lat}
           lng={coordinates.lng}
