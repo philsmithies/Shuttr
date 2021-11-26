@@ -76,7 +76,7 @@ export default function Login() {
       url: "/login",
     }).then((res) => {
       if (res.data === "Successfully Authenticated") {
-        window.location.href = "/discover";
+        window.location.href = "/pages/discover";
       }
     });
   };

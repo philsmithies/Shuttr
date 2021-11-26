@@ -146,7 +146,7 @@ export default function ButtonBases() {
             }}
             onClick={(e) => {
               e.preventDefault();
-              window.location.href = "/" + image.title;
+              window.location.href = "/pages/" + image.title;
             }}
           >
             <span

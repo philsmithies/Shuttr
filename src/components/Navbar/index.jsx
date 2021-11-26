@@ -29,31 +29,31 @@ export default function NavBar() {
       ) : null}
 
       {data ? (
-        <Link to="/profile" className="index-button">
+        <Link to="/pages/profile" className="index-button">
           <li>Profile</li>
         </Link>
       ) : null}
 
       {data ? (
-        <Link to="/Map" className="index-button">
+        <Link to="/pages/map" className="index-button">
           <li>Map</li>
         </Link>
       ) : null}
 
       {data ? (
-        <Link to="/Discover" className="index-button">
+        <Link to="/pages/discover" className="index-button">
           <li className="discover">Discover</li>
         </Link>
       ) : null}
 
       {data ? (
-        <Link to="/Inspiration" className="index-button">
+        <Link to="/pages/inspiration" className="index-button">
           <li>Inspiration</li>
         </Link>
       ) : null}
 
       {data ? (
-        <Link to="/ImageUpload" className="index-button">
+        <Link to="/pages/imageUpload" className="index-button">
           <li>Upload</li>
         </Link>
       ) : null}
@@ -65,7 +65,7 @@ export default function NavBar() {
       ) : null}
 
       {data ? null : (
-        <Link to="/login" className="login-button">
+        <Link to="/pages/login" className="login-button">
           <li className="login">Log In</li>
         </Link>
       )}
