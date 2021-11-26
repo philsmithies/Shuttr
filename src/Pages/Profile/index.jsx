@@ -38,15 +38,6 @@ function Profile() {
     }
   };
 
-  const filterPictures = function (pics) {
-    console.log(pics);
-    const filteredPics = pics.filter(
-      (picture) => data && picture.author === data.username
-    );
-    console.log(filteredPics);
-    setPics(filteredPics);
-  };
-
   useEffect(() => {
     console.log(userId);
     // if(!userId) return;
@@ -68,8 +59,16 @@ function Profile() {
   }, [userId]);
 
   useEffect(() => {
+    const filterPictures = function (pics) {
+      console.log(pics);
+      const filteredPics = pics.filter(
+        (picture) => data && picture.author === data.username
+      );
+      console.log(filteredPics);
+      setPics(filteredPics);
+    };
     filterPictures(allPictures);
-  }, [data, allPictures]);
+  }, [allPictures, pics, data]);
 
   return (
     <div>
