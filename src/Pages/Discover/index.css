@@ -212,17 +212,10 @@
   color: #ffcb9a;
 }
 
-/* 
-  .popup_styles {
-    margin: auto;
-    background: rgb(255, 255, 255);
-    width: 500px;
-    padding: 5px;
-  } */
-
 .modal {
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
-  padding: 5rem 10rem;
   background: rgb(87, 101, 95);
   background: linear-gradient(
     180deg,
@@ -230,15 +223,10 @@
     rgba(44, 53, 49, 1) 100%
   );
 }
-/* .modal > .header {
-    width: 100%;
-    border-bottom: 1px solid gray;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
-  } */
-.modal > .modal-content {
-  padding: 10px 5px;
+
+.modal-content {
+  padding: 2em 0;
+  width: 80%;
 }
 
 .modal > .close {
@@ -251,7 +239,7 @@
   top: -10px;
   font-size: 24px;
   border-radius: 18px;
-  border: 1px solid #cfcece;
+  /* border: 1px solid #cfcece; */
 }
 
 .search_results {
