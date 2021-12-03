@@ -37,7 +37,6 @@
     "react-video-cover": "^1.2.2",
     "reactjs-popup": "^2.0.4",
     "redux": "^4.1.0",
-    "sequelize": "^6.6.2",
     "use-places-autocomplete": "^1.9.3",
     "video-react": "^0.14.1",
     "web-vitals": "^1.0.1"
