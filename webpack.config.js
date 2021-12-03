@@ -9,7 +9,11 @@ module.exports = {
       template: "./template.html",
 
       // Pass the full url with the key!
-      apiUrl: `https://maps.googleapis.com/maps/api/js?key=${api_key}`,
+      // mapsApiUrl: `https://maps.googleapis.com/maps/api/js?key=${api_key}`,
+
+      config: JSON.stringify({
+        apiUrl: "/api",
+      }),
     }),
   ],
 };
