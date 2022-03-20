@@ -1,0 +1,92 @@
+{
+  "homepage": "https://awesome-app.vercel.app",
+  "type": "module",
+  "name": "awesome-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.1",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@reach/combobox": "^0.15.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/google-maps": "^3.2.3",
+    "axios": "^0.21.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "4.6.0",
+    "bundle-js": "^0.1.1",
+    "cloudinary-react": "^1.7.0",
+    "google-maps": "^4.3.3",
+    "mapbox-gl": "^2.3.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "node": "^17.7.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-cool-onclickoutside": "^1.6.2",
+    "react-dom": "^17.0.2",
+    "react-images-uploading": "^3.1.2",
+    "react-map-gl": "^6.1.16",
+    "react-mapbox-gl": "^5.1.1",
+    "react-password-strength-bar": "^0.3.3",
+    "react-places-autocomplete": "^7.3.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^4.0.3",
+    "react-video-cover": "^1.2.2",
+    "reactjs-popup": "^2.0.4",
+    "redux": "^4.1.0",
+    "use-places-autocomplete": "^1.9.3",
+    "video-react": "^0.14.1",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "run-p server start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node-env-run server --exec nodemon | pino-colada"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/googlemaps": "^3.43.3",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.19.2",
+    "c8": "^7.11.0",
+    "cloudinary": "^1.28.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-pino-logger": "^7.0.0",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.2.6",
+    "mongoose-unique-validator": "^3.0.0",
+    "morgan": "^1.10.0",
+    "node-env-run": "^4.0.2",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "pino-colada": "^2.2.2"
+  }
+}
