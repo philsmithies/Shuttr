@@ -25,7 +25,7 @@ export default function App() {
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/map" component={Map} />
-            <Route path="/imageupload" component={ImageUpload} />
+            <Route path="/upload" component={ImageUpload} />
             <Route path="/inspiration" component={Inspiration} />
             <Route path="/profile/:userId" component={Profile} />
             <Route path="/profile" component={Profile} />

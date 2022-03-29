@@ -34,24 +34,20 @@ export default function NavBar() {
         </Link>
       ) : null}
 
-      {!data ? (
-        <Link to="/map" className="index-button">
-          <li>Map</li>
-        </Link>
-      ) : null}
+      <Link to="/map" className="index-button">
+        <li>Map</li>
+      </Link>
 
-      {!data ? (
-        <Link to="/discover" className="index-button">
-          <li className="discover">Discover</li>
-        </Link>
-      ) : null}
+      <Link to="/discover" className="index-button">
+        <li className="discover">Discover</li>
+      </Link>
 
       <Link to="/inspiration" className="index-button">
         <li>Inspiration</li>
       </Link>
 
       {data ? (
-        <Link to="/imageUpload" className="index-button">
+        <Link to="/upload" className="index-button">
           <li>Upload</li>
         </Link>
       ) : null}

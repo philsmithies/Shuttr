@@ -50,7 +50,7 @@ export default function ImageUpload() {
       return (
         <div>
           <img
-            className="loadinggif"
+            class="loadinggif"
             src={process.env.PUBLIC_URL + "/images/loading.gif"}
             alt="loading animation"
           />
@@ -160,8 +160,8 @@ export default function ImageUpload() {
 
   const classes = useStyles();
   return (
-    <div className="form_wrapper">
-      <div className="preview">
+    <div class="form_wrapper">
+      <div class="preview">
         <div className="preview-text">
           <h2>Upload preview</h2>
         </div>
@@ -198,46 +198,53 @@ export default function ImageUpload() {
       <label htmlFor="contained-button-file">
 
       </label> */}
-          <div className="places">
-            <PlacesAutocomplete
-              searchOptions={searchOptions}
-              value={location}
-              onChange={setLocation}
-              onSelect={handleSelect}
-            >
-              {({
-                getInputProps,
-                suggestions,
-                getSuggestionItemProps,
-                loading,
-              }) => (
-                <div>
-                  {/* <p>Latitude: {coordinates.lat}</p>
-            <p>Longitude: {coordinates.lng}</p> */}
-
-                  <input {...getInputProps({ placeholder: "Type address" })} />
-
+          {false && (
+            <div class="places">
+              <PlacesAutocomplete
+                searchOptions={searchOptions}
+                value={location}
+                onChange={setLocation}
+                onSelect={handleSelect}
+              >
+                {({
+                  getInputProps,
+                  suggestions,
+                  getSuggestionItemProps,
+                  loading,
+                }) => (
                   <div>
-                    {loading ? <div>...loading</div> : null}
+                    {/* <p>Latitude: {coordinates.lat}</p>
+          <p>Longitude: {coordinates.lng}</p> */}
 
-                    {suggestions.map((suggestion) => {
-                      const style = {
-                        backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
-                        cursor: "pointer",
-                      };
+                    <input
+                      {...getInputProps({ placeholder: "Type address" })}
+                    />
 
-                      return (
-                        <div {...getSuggestionItemProps(suggestion, { style })}>
-                          {suggestion.description}
-                        </div>
-                      );
-                    })}
+                    <div>
+                      {loading ? <div>...loading</div> : null}
+
+                      {suggestions.map((suggestion) => {
+                        const style = {
+                          backgroundColor: suggestion.active
+                            ? "#41b6e6"
+                            : "#fff",
+                          cursor: "pointer",
+                        };
+
+                        return (
+                          <div
+                            {...getSuggestionItemProps(suggestion, { style })}
+                          >
+                            {suggestion.description}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              )}
-            </PlacesAutocomplete>
-          </div>
-
+                )}
+              </PlacesAutocomplete>
+            </div>
+          )}
           <TextField
             style={{ backgroundColor: "#fff", color: "#000000" }}
             variant="filled"
@@ -303,11 +310,11 @@ export default function ImageUpload() {
           {isLoading()}
         </form>
       </div>
-      <div className="map_card">
-        <div className="map_text">
+      <div class="map_card">
+        <div class="map_text">
           <h2>Preview</h2>
         </div>
-        <div className="minimap_wrapper">{Minimap()}</div>
+        <div class="minimap_wrapper">{Minimap()}</div>
       </div>
     </div>
   );

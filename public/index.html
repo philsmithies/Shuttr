@@ -28,38 +28,11 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!-- <script>
-        let autocomplete;
-          function initAutoComplete() {
-            autocomplete = new google.maps.places.Autocomplete(
-              document.getElementById('autocomplete'),
-              {
-                types: ['establishment'],
-                componentRestrictions: {'country': ['GB']},
-                fields: ['place_id', 'geometry', 'name']
-              }
-            )
-            autocomplete.addListener('place_changed', onPlaceChanged)
-          }
-
-          function onPlaceChanged() {
-            var place = autocomplete.getPlace();
-
-            if (!place.geometry) {
-              // reset if no selection
-              document.getElementById('autocomnplete').placeholder = 'Enter a place'
-            } else {
-              // Display details
-              document.getElementById('details').innerHTML = place.name
-            }
-          }
-    </script> -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css"
       rel="stylesheet"
     />
-    <title></title>
     <!-- <script src="%REACT_APP_GOOGLEMAPS_API%"></script> -->
     <div id="root"></div>
     <!--
