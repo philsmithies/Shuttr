@@ -7,7 +7,7 @@ import { UserContext } from "../../Contexts/UserContext";
 export default function NavBar() {
   const data = useContext(UserContext);
   const logout = () => {
-    Axios.get("/api/logout").then((res) => {
+    Axios.get(`https://shuttr-backend.herokuapp.com/api/logout`).then((res) => {
       window.localStorage.removeItem("shuttr-user");
       if (res.data === "success") {
         return (window.location.href = "/");

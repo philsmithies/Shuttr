@@ -10,9 +10,8 @@ function Map() {
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
 
   useEffect(() => {
-    axios("/api/photos/all")
+    axios(`https://shuttr-backend.herokuapp.com/api/photos/all`)
       .then((response) => {
-        console.log(response.data);
         setAllData(response.data);
       })
       .catch((error) => {

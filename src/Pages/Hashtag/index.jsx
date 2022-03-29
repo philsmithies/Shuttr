@@ -10,7 +10,7 @@ export default function Hashtag({ searchValue }) {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    axios("/api/photos/all")
+    axios(`https://shuttr-backend.herokuapp.com/api/photos/all`)
       .then((response) => {
         console.log(response.data);
         setFilteredData(response.data);

@@ -29,7 +29,7 @@ export default function Discover() {
   };
 
   useEffect(() => {
-    axios("/api/photos/all")
+    axios(`https://shuttr-backend.herokuapp.com/api/photos/all`)
       .then((response) => {
         setAllData(response.data);
         setFilteredData(response.data);

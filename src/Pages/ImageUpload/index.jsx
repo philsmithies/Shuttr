@@ -87,7 +87,7 @@ export default function ImageUpload() {
       const imageUrl = res.data.secure_url;
       const image = await axios
         .post(
-          "/api/photos/upload",
+          `https://shuttr-backend.herokuapp.com/api/photos/upload`,
           {
             imageUrl,
             hashtag,

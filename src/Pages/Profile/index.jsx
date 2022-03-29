@@ -20,7 +20,7 @@ function Profile() {
       Axios({
         method: "GET",
         withCredentials: true,
-        url: "/api/user/" + userId,
+        url: `https://shuttr-backend.herokuapp.com/api/user/` + userId,
       }).then((res) => {
         setData(res.data);
       });
@@ -28,9 +28,11 @@ function Profile() {
   };
 
   useEffect(() => {
-    Axios("/api/photos/all").then((response) => {
-      setAllPictures(response.data);
-    });
+    Axios(`https://shuttr-backend.herokuapp.com/api/photos/all`).then(
+      (response) => {
+        setAllPictures(response.data);
+      }
+    );
     userId ? getProfileData(userId) : getProfileData();
     const filterPictures = function (pics) {
       const filteredPics = pics.filter(

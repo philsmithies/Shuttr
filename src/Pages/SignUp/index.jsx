@@ -70,7 +70,7 @@ export default function SignUp() {
     const imageUrl = res.data.secure_url;
     try {
       await Axios.post(
-        "/api/signup",
+        `https://shuttr-backend.herokuapp.com/api/signup`,
         {
           name: nameReg,
           username: usernameReg,

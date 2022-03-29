@@ -74,11 +74,11 @@ export default function Login() {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "/api/login",
+      url: `/api/login`,
     }).then((res) => {
       window.localStorage.setItem("shuttr-user", JSON.stringify(res.data));
       if (res.data.token) {
-        window.location.href = "/discover";
+        window.location.href = "/";
       }
     });
   };
