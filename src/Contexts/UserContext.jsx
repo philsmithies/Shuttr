@@ -1,6 +1,6 @@
 import React, { useState, createContext, useEffect } from "react";
 
-import Axios from "axios";
+// import Axios from "axios";
 
 // This will hold the context
 export const UserContext = createContext();
@@ -9,14 +9,22 @@ const UserContextProvider = (props) => {
   const [data, setData] = useState();
 
   // Fetch Method to get the data
+  // useEffect(() => {
+  //   Axios({
+  //     method: "GET",
+  //     withCredentials: true,
+  //     url: "/user",
+  //   }).then((res) => {
+  //     setData(res.data);
+  //   });
+  // }, []);
+
   useEffect(() => {
-    Axios({
-      method: "GET",
-      withCredentials: true,
-      url: "/user",
-    }).then((res) => {
-      setData(res.data);
-    });
+    const loggedUserJSON = window.localStorage.getItem("shuttr-user");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      setData(user);
+    }
   }, []);
 
   return (

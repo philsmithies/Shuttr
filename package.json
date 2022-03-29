@@ -1,7 +1,6 @@
 {
-  "homepage": "https://awesome-app.vercel.app",
   "type": "module",
-  "name": "awesome-app",
+  "name": "shuttr-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

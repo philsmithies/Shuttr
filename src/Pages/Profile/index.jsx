@@ -1,88 +1,57 @@
 import "./index.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Axios from "axios";
 import { Image } from "cloudinary-react";
 import { useParams, Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
+import { UserContext } from "../../Contexts/UserContext";
 
 function Profile() {
   const [data, setData] = useState();
+  const userData = useContext(UserContext);
   const [allPictures, setAllPictures] = useState([]);
-  // const [filteredData, setFilteredData] = useState([]);
   const [pics, setPics] = useState([]);
-
-  const { userId } = useParams();
-  // let tempData = {};
+  let { userId } = useParams();
 
   const getProfileData = function (userId) {
-    // const data = useContext(UserContext)
-    console.log("getProfileData");
     if (!userId) {
-      Axios({
-        method: "GET",
-        withCredentials: true,
-        url: "/api/user",
-      }).then((res) => {
-        console.log(res.data);
-        setData(res.data);
-      });
+      setData(userData);
     } else {
       Axios({
         method: "GET",
         withCredentials: true,
         url: "/api/user/" + userId,
       }).then((res) => {
-        console.log(res.data);
         setData(res.data);
       });
     }
   };
 
   useEffect(() => {
-    console.log(userId);
-    // if(!userId) return;
-    // setData(useContext(UserContext));
-    getProfileData(userId);
-    // .then(userData => {
-    // const userData = getProfileData(userId);
-    // tempData = userData;
-    // console.log(userData);
-    // setData(userData);
-    // });
-    Axios("/photos/all").then(function (response) {
-      console.log(response.data);
+    Axios("/api/photos/all").then((response) => {
       setAllPictures(response.data);
-      // setFilteredData(response.data);
-
-      // filterData(response.data);
     });
-  }, [userId]);
-
-  useEffect(() => {
+    userId ? getProfileData(userId) : getProfileData();
     const filterPictures = function (pics) {
-      console.log(pics);
       const filteredPics = pics.filter(
         (picture) => data && picture.author === data.username
       );
-      console.log(filteredPics);
       setPics(filteredPics);
     };
     filterPictures(allPictures);
-  }, [allPictures, pics, data]);
+  }, []);
 
   return (
     <div>
-      {!!data && (
+      {data && (
         <div>
-          {console.log("this is rendered")}
-          {console.log(data)}
           <div className="profile_layout">
             <div className="userwrapper">
               <div className="profilephoto_wrapper">
                 <Image
                   className="profile_photo"
                   cloudName="cyber_photos"
-                  publicId={data.publicId}
+                  publicId={data.publicId && data.publicId}
                 />
               </div>
               <div className="profile-bio">
@@ -90,7 +59,7 @@ function Profile() {
                 <p className="profile-title">
                   Bio:
                   <br />
-                  {data.job}
+                  {data.job && data.job}
                 </p>
                 <p className="location-title">London, UK</p>
               </div>

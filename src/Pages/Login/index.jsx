@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [token, setToken] = useState(null);
+
   const login = () => {
     Axios({
       method: "POST",
@@ -76,12 +76,13 @@ export default function Login() {
       withCredentials: true,
       url: "/api/login",
     }).then((res) => {
-      setToken(res.data.token);
-      if (token) {
+      window.localStorage.setItem("shuttr-user", JSON.stringify(res.data));
+      if (res.data.token) {
         window.location.href = "/pages/discover";
       }
     });
   };
+
   const classes = useStyles();
   return (
     <Grid container component="main" className={classes.root}>
