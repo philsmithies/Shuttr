@@ -198,7 +198,7 @@ export default function ImageUpload() {
       <label htmlFor="contained-button-file">
 
       </label> */}
-          {false && (
+          {!false && (
             <div class="places">
               <PlacesAutocomplete
                 searchOptions={searchOptions}

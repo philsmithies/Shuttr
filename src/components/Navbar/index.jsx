@@ -7,9 +7,7 @@ import { UserContext } from "../../Contexts/UserContext";
 export default function NavBar() {
   const data = useContext(UserContext);
   const logout = () => {
-    Axios.get("/api/logout", {
-      withCredentials: true,
-    }).then((res) => {
+    Axios.get("/api/logout").then((res) => {
       window.localStorage.removeItem("shuttr-user");
       if (res.data === "success") {
         return (window.location.href = "/");
@@ -18,15 +16,13 @@ export default function NavBar() {
   };
   return (
     <nav>
-      {!data ? (
-        <Link to="/">
-          <img
-            className="navbar_logo"
-            src={process.env.PUBLIC_URL + "/images/shuttrlogo.png"}
-            alt="header logo"
-          />
-        </Link>
-      ) : null}
+      <Link to="/">
+        <img
+          className="navbar_logo"
+          src={process.env.PUBLIC_URL + "/images/shuttrlogo.png"}
+          alt="header logo"
+        />
+      </Link>
 
       {data ? (
         <Link to="/profile" className="index-button">
@@ -38,7 +34,7 @@ export default function NavBar() {
         <li>Map</li>
       </Link>
 
-      <Link to="/discover" className="index-button">
+      <Link to="/" className="index-button">
         <li className="discover">Discover</li>
       </Link>
 

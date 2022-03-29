@@ -38,7 +38,7 @@ export default function Home() {
             width="50%"
             variant="contained"
             color="primary"
-            href="/pages/signup"
+            href="/signup"
             style={{ backgroundColor: "#51fbee", color: "#000000" }}
           >
             Sign up
@@ -64,7 +64,7 @@ export default function Home() {
             width="50%"
             variant="contained"
             color="primary"
-            href="/pages/signup"
+            href="/signup"
             style={{ backgroundColor: "#51fbee", color: "#000000" }}
           >
             Find Out More

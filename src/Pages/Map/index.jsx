@@ -10,7 +10,7 @@ function Map() {
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
 
   useEffect(() => {
-    axios("/photos/all")
+    axios("/api/photos/all")
       .then((response) => {
         console.log(response.data);
         setAllData(response.data);

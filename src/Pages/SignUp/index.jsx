@@ -85,7 +85,7 @@ export default function SignUp() {
       ).then((response) => {
         console.log(response);
         if (response.data === "User Created") {
-          window.location.href = "/pages/login";
+          window.location.href = "/login";
         } else if (response.data !== "User Created") {
           setIsMsg("User already exists, please sign in or create new account");
           clearTimeout(newMsgTimeoutHandle);

@@ -78,7 +78,7 @@ export default function Login() {
     }).then((res) => {
       window.localStorage.setItem("shuttr-user", JSON.stringify(res.data));
       if (res.data.token) {
-        window.location.href = "/pages/discover";
+        window.location.href = "/discover";
       }
     });
   };

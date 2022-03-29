@@ -39,7 +39,7 @@ function Profile() {
       setPics(filteredPics);
     };
     filterPictures(allPictures);
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <div>

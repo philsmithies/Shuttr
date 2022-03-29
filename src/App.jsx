@@ -29,7 +29,6 @@ export default function App() {
             <Route path="/inspiration" component={Inspiration} />
             <Route path="/profile/:userId" component={Profile} />
             <Route path="/profile" component={Profile} />
-            <Route path="/pages/discover" component={Discover} />
             <Route
               path="/pages/Architecture"
               render={() => <Hashtag searchValue={`architecture`} />}
