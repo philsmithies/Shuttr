@@ -77,7 +77,7 @@ function Profile() {
               >
                 {data.username}'s Posts
               </Typography>
-              {pics.map((value, index) => (
+              {pics?.map((value, index) => (
                 <div className="single-post" key={index}>
                   <Image
                     className="profile-feed"

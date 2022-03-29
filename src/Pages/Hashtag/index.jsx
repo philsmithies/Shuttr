@@ -27,7 +27,7 @@ export default function Hashtag({ searchValue }) {
   return (
     <div className="page">
       <div className="container">
-        {pics.map((value, index) => (
+        {pics?.map((value, index) => (
           <div className="card">
             <div className="face1">
               <div className="content" key={value.id}>

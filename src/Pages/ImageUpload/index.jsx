@@ -221,7 +221,7 @@ export default function ImageUpload() {
                   <div>
                     {loading ? <div>...loading</div> : null}
 
-                    {suggestions.map((suggestion) => {
+                    {suggestions?.map((suggestion) => {
                       const style = {
                         backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
                         cursor: "pointer",
