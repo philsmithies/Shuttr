@@ -56,7 +56,7 @@ export default function Discover() {
           {<b>{input}</b>}
         </div>
         <div className="container">
-          {filteredData.map((value, index) => (
+          {filteredData?.map((value, index) => (
             <div className="card">
               <div className="face1">
                 <div className="content" key={value.id}>

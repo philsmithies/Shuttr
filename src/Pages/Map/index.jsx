@@ -41,7 +41,7 @@ function Map() {
         mapStyle="mapbox://styles/ajmccor/ckq0xqybt3fsf18rltfgs0y5t"
       >
         <div>
-          {allData.map((value) => {
+          {allData?.map((value) => {
             return (
               <div key={value.id}>
                 <Marker

@@ -198,53 +198,47 @@ export default function ImageUpload() {
       <label htmlFor="contained-button-file">
 
       </label> */}
-          {!false && (
-            <div class="places">
-              <PlacesAutocomplete
-                searchOptions={searchOptions}
-                value={location}
-                onChange={setLocation}
-                onSelect={handleSelect}
-              >
-                {({
-                  getInputProps,
-                  suggestions,
-                  getSuggestionItemProps,
-                  loading,
-                }) => (
-                  <div>
-                    {/* <p>Latitude: {coordinates.lat}</p>
+
+          <div class="places">
+            <PlacesAutocomplete
+              searchOptions={searchOptions}
+              value={location}
+              onChange={setLocation}
+              onSelect={handleSelect}
+            >
+              {({
+                getInputProps,
+                suggestions,
+                getSuggestionItemProps,
+                loading,
+              }) => (
+                <div>
+                  {/* <p>Latitude: {coordinates.lat}</p>
           <p>Longitude: {coordinates.lng}</p> */}
 
-                    <input
-                      {...getInputProps({ placeholder: "Type address" })}
-                    />
+                  <input {...getInputProps({ placeholder: "Type address" })} />
 
-                    <div>
-                      {loading ? <div>...loading</div> : null}
+                  <div>
+                    {loading ? <div>...loading</div> : null}
 
-                      {suggestions.map((suggestion) => {
-                        const style = {
-                          backgroundColor: suggestion.active
-                            ? "#41b6e6"
-                            : "#fff",
-                          cursor: "pointer",
-                        };
+                    {suggestions.map((suggestion) => {
+                      const style = {
+                        backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                        cursor: "pointer",
+                      };
 
-                        return (
-                          <div
-                            {...getSuggestionItemProps(suggestion, { style })}
-                          >
-                            {suggestion.description}
-                          </div>
-                        );
-                      })}
-                    </div>
+                      return (
+                        <div {...getSuggestionItemProps(suggestion, { style })}>
+                          {suggestion.description}
+                        </div>
+                      );
+                    })}
                   </div>
-                )}
-              </PlacesAutocomplete>
-            </div>
-          )}
+                </div>
+              )}
+            </PlacesAutocomplete>
+          </div>
+
           <TextField
             style={{ backgroundColor: "#fff", color: "#000000" }}
             variant="filled"
