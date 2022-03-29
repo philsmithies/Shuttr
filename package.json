@@ -65,7 +65,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://shuttr-backend.herokuapp.com",
   "devDependencies": {
     "@types/googlemaps": "^3.43.3",
     "bcrypt-nodejs": "^0.0.3",

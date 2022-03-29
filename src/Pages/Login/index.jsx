@@ -73,8 +73,7 @@ export default function Login() {
         username: loginUsername.toLowerCase(),
         password: loginPassword,
       },
-      withCredentials: true,
-      url: `/api/login`,
+      url: `https://shuttr-backend.herokuapp.com/api/login`,
     }).then((res) => {
       window.localStorage.setItem("shuttr-user", JSON.stringify(res.data));
       if (res.data.token) {
