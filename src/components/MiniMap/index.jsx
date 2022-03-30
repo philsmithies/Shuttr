@@ -1,6 +1,12 @@
+/* eslint-disable import/no-webpack-loader-syntax */
 import React, { useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import mapboxgl from "mapbox-gl";
 import { Room } from "@material-ui/icons";
+
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 function MiniMap({ lat, lng, width, height, zoom, color }) {
   const [viewport, setViewport] = useState({

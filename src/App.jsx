@@ -1,5 +1,4 @@
 import "./App.css";
-import { useContext } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import SignUp from "./Pages/SignUp";
@@ -10,13 +9,21 @@ import Profile from "./Pages/Profile";
 import Discover from "./Pages/Discover";
 import Inspiration from "./Pages/Inspiration";
 import Hashtag from "./Pages/Hashtag";
-import { UserContext } from "./Contexts/UserContext";
+import { Helmet } from "react-helmet";
 
 export default function App() {
-  const data = useContext(UserContext);
-  console.log("data is", data);
   return (
     <div>
+      <Helmet>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js" />
+        <script
+          src={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_PLACES_API}&libraries=places&callback=initAutoComplete`}
+        ></script>
+      </Helmet>
       <div className="App">
         <BrowserRouter basename="/">
           <NavBar />

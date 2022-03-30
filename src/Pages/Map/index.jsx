@@ -1,9 +1,15 @@
+/* eslint-disable import/no-webpack-loader-syntax */
 import React, { useEffect, useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import mapboxgl from "mapbox-gl";
 import { Room } from "@material-ui/icons";
 import axios from "axios";
 import { Image } from "cloudinary-react";
 import "./index.css";
+
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 function Map() {
   const [allData, setAllData] = useState([]);

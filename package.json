@@ -18,13 +18,14 @@
     "bundle-js": "^0.1.1",
     "cloudinary-react": "^1.7.0",
     "google-maps": "^4.3.3",
-    "mapbox-gl": "^2.3.0",
+    "mapbox-gl": "^2.7.1",
     "materialize-css": "^1.0.0-rc.2",
-    "node": "^17.7.1",
+    "node": "^16.13.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-cool-onclickoutside": "^1.6.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-images-uploading": "^3.1.2",
     "react-map-gl": "^6.1.16",
     "react-mapbox-gl": "^5.1.1",
@@ -37,7 +38,8 @@
     "redux": "^4.1.0",
     "use-places-autocomplete": "^1.9.3",
     "video-react": "^0.14.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -57,7 +59,9 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not ie 11",
+      "not chrome < 51",
+      "not safari < 10"
     ],
     "development": [
       "last 1 chrome version",
