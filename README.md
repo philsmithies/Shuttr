@@ -37,27 +37,12 @@ Modal:
 ## Getting Started
 
 Clone this repo and move into the project directory.
-Run `yarn install` to ensure all node modules are running.
+Run `yarn` to ensure all node modules are installed.
 
 ```
 $ git clone https://github.com/philsmithies/shuttr.git
 $ cd shuttr
 $ yarn
-```
-
-Initialize the server and then run it
-
-```
-$ cd server
-$ yarn
-$ yarn server
-```
-
-Once yarn is installed you can run the project on the client side using this code
-
-```
-$ cd ..
-$ yarn start
 ```
 
 Visit `http://localhost:3000/` to view the app
@@ -71,12 +56,12 @@ Visit `http://localhost:3000/` to view the app
 - Create an account
 - Password strength bar.
 - View full screen map of all the posts within the locations (just London for now....)
+- JWT Authentication
 - Upload photos with GPS coordinates created by user.
 - View a dynamic map of hashtags.
 - Direct link to the location of the photo via a modal of the image.
 - View own posts on yours and other users profile.
 - Remain logged in (remember token)
-- Log out
 
 <!-- To Add -->
 
